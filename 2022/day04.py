@@ -1,7 +1,9 @@
+from aocd import get_data
 numOfOverlap = 0
 
-with open('day4.txt','r') as file:
-    lines = file.read().splitlines()
+lines = get_data(day=4,year=2022).splitlines()
+# with open('day4.txt','r') as file:
+#     lines = file.read().splitlines()
 
 lines = [el.split(',') for el in lines]
 lines = [[tuple(i.split('-')) for i in el] for el in lines]
